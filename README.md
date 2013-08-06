@@ -1,7 +1,7 @@
-ConciseHttpServer
+ConciseStaticHttpServer
 =================
 
-node Concise Http Server
+node Concise Static Http Server
 
 based on an answer by @Jeff Ward for
 
