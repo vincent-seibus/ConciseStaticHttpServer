@@ -24,7 +24,7 @@ with callback
 **httpServer**
 
 ```
-		var httpServer = function (dir)
+		var httpServer = function(dir)
 		{
 			var http = require('http');
 			var fs = require('fs');
@@ -40,11 +40,12 @@ with callback
 				"css": "text/css"
 			};
 
-			return http.createServer(function (req, res)
+			return http.createServer(function(req, res)
 			{
-				var uri = url.parse(req.url).pathname;
-				var filename = path.join(process.cwd() + dir, unescape(uri));
-				var indexFilename = process.cwd() + dir + '/index.html';
+				var uri = url.parse(req.url)
+					.pathname;
+				var filename = path.join(dir, unescape(uri));
+				var indexFilename = path.join(dir, unescape('index.html'));
 				var stats;
 
 				console.log(filename);
@@ -68,7 +69,8 @@ with callback
 				if (stats.isFile())
 				{
 					// path exists, is a file
-					var mimeType = mimeTypes[path.extname(filename).split(".")[1]];
+					var mimeType = mimeTypes[path.extname(filename)
+						.split(".")[1]];
 					res.writeHead(200,
 					{
 						'Content-Type': mimeType
