@@ -7,24 +7,26 @@ based on an answer by @Jeff Ward for
 
 http://stackoverflow.com/questions/7268033/basic-static-file-server-in-nodejs
 
-**Usage:**
+**Simple Usage:**
 
     httpServer(dir).listen(port);
     
-with callback
-
-    httpServer('/www')
-    .listen(9999, function ()
-    {
- 		console.log('HTTP listening 9999');
-    });
-  
+**with Callback:**
+```
+var HTTPserver =
+			httpServer(path
+				.join(__dirname, 'www'))
+			.listen(9999, function()
+			{
+				console.log('HTTP listening 9999');
+			});
+``` 
 ----
 
 **httpServer**
 
 ```
-		var httpServer = function(dir)
+var httpServer = function(dir)
 		{
 			var http = require('http');
 			var fs = require('fs');
