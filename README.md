@@ -14,12 +14,11 @@ http://stackoverflow.com/questions/7268033/basic-static-file-server-in-nodejs
 **with Callback:**
 ```
 var HTTPserver =
-			httpServer(path
-				.join(__dirname, 'www'))
-			.listen(9999, function()
-			{
-				console.log('HTTP listening 9999');
-			});
+            httpServer('www')
+            .listen(8080, function()
+            {
+                console.log('HTTP listening 8080');
+            });
 ``` 
 ----
 
