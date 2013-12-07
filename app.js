@@ -79,3 +79,12 @@ var httpServer = function(dir)
 
             });
         };
+ 
+var path = require("path");       
+var HTTPserver =
+            httpServer(path
+                .join(__dirname, 'www'))
+            .listen(80, function()
+            {
+                console.log('HTTP listening 80');
+            });
