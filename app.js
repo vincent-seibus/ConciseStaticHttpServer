@@ -84,7 +84,7 @@ var path = require("path");
 var HTTPserver =
             httpServer(path
                 .join(__dirname, 'www'))
-            .listen(80, function()
+            .listen(8080, function()
             {
-                console.log('HTTP listening 80');
+                console.log('HTTP listening 8080');
             });
