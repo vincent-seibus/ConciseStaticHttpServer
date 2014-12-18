@@ -13,6 +13,9 @@ http://stackoverflow.com/questions/7268033/basic-static-file-server-in-nodejs
     
 **with Callback:**
 ```
+
+path = require('path');
+
 var HTTPserver =
 			httpServer(path
 				.join(__dirname, 'www'))
